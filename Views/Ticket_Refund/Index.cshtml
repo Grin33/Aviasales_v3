@@ -1,0 +1,15 @@
+﻿@model Ticket
+@{
+    ViewData["Title"] = "Отказ от брони билета";
+}
+
+<div class="text-center">
+    <h1>Поиск</h1>
+</div>
+<form method="post" asp-controller="Tickets" asp-action="Refund">
+    <label asp-for="Ticket_Number"></label>
+    <input asp-for="Ticket_Number" />
+    <span asp-validation-for="Ticket_Number"></span>
+
+    <input type="submit" value="Отказ">
+</form>

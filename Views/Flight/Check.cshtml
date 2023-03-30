@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Aviasales_v3.Models.Flight>
+
+@{
+    ViewData["Title"] = "Check";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Id)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Where_From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Where_To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.When)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Free_Seats)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Where_From)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Where_To)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.When)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Free_Seats)
+                </td>
+                <td>
+                    @*<form method="post" asp-controller="Flight" asp-action="Booking">*@
+                    @*<input type="submit" value="Кнопки на отдыхе (не работают)">*@
+                    <a asp-controller="Tickets" asp-action="Create" asp-route-id="@item.Id">Бронировать</a>
+                    @*</form>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*<body>
+    <form method="post" asp-controller="Flight" asp-action="Booking">
+        <label>Введите номер рейса</label>
+        <input int='id' />
+        @*<span asp-validation-for="When"></span>
+        <input type="submit" value="Забронировать">
+    </form>
+</body>*@

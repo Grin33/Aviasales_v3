@@ -1,0 +1,40 @@
+﻿@model Aviasales_v3.Models.Flight
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Where_From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Where_From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Where_To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Where_To)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.When)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.When)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Free_Seats)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Free_Seats)
+        </dd>
+    </dl>
+</div>
+<div>
+</div>

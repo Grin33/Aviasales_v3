@@ -1,0 +1,23 @@
+﻿@model Flight
+@{
+    ViewData["Title"] = "Бронироване Авиабилетов";
+}
+
+<div class="text-center">
+    <h1>Поиск</h1>
+</div>
+<form method="post" asp-controller="Flight" asp-action="Check">
+    <label asp-for="Where_From"></label>
+    <input asp-for="Where_From" />
+    <span asp-validation-for="Where_From"></span>
+
+    <label asp-for="Where_To"></label>
+    <input asp-for="Where_To" />
+    <span asp-validation-for="Where_To"></span>
+
+    <label asp-for="When"></label>
+    <input asp-for="When" />
+    <span asp-validation-for="When"></span>
+
+    <input type="submit" value="Поиск рейсов">
+</form>
